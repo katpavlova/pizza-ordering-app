@@ -1,6 +1,12 @@
 import { useEffect, useState, MouseEvent } from 'react';
 import Button from './components/Button/Button';
 import Input from './components/Input/Input';
+import {Routes, Route, createBrowserRouter, RouterProvider, Link} from 'react-router-dom';
+import { Menu } from './pages/Menu';
+import { Cart } from './pages/Cart/Cart';
+
+
+
 
 function App() {
 	const [counter, setCounter] = useState<number>(0);
@@ -16,6 +22,8 @@ function App() {
 			<Button onClick={addCounter} appearance='small'>Hello World!</Button>
 
 			<Input placeholder='Email' />
+
+
 		</>
 	);
 }
