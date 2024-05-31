@@ -1,0 +1,73 @@
+.layout{
+    display: flex;
+    min-height: 100px;
+    height: 100vh;
+
+}
+
+.sidebar {
+    padding: 30px;
+    border-right: 1p solid var(--separator-color);
+    display: flex;
+    flex-direction: column;
+}
+.exit{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.link:hover{
+    color: var(--primary-color);
+}
+.active{
+    color: var(--primary-color);
+}
+
+
+.user{
+    margin-bottom: 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.name{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--text-color);
+}
+
+.email{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--text-secondary-color);
+}
+
+.circle{
+    height: 80px;
+    width: 80px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
