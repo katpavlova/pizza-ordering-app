@@ -2,7 +2,7 @@ import { useEffect, useState, MouseEvent } from 'react';
 import Button from './components/Button/Button';
 import Input from './components/Input/Input';
 import {Routes, Route, createBrowserRouter, RouterProvider, Link} from 'react-router-dom';
-import { Menu } from './pages/Menu';
+import { Menu } from './pages/Menu/Menu';
 import { Cart } from './pages/Cart/Cart';
 
 

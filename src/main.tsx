@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { Menu } from './pages/Menu.tsx';
+import { Menu } from './pages/Menu/Menu.tsx';
 import { Cart } from './pages/Cart/Cart.tsx';
 import { Layout } from './layout/Menu/Layout.tsx';
+import { Product } from './pages/Product/Product.tsx';
 
 const router = createBrowserRouter([
 	{ 
@@ -19,7 +20,12 @@ const router = createBrowserRouter([
 			{
 				path: '/cart',
 				element: <Cart />
+			},
+			{
+				path: '/product/:id',
+				element: <Product />
 			}
+
 		]
 	}
 ]);

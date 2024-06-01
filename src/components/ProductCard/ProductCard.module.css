@@ -1,0 +1,82 @@
+.header{
+    min-height: 165px;
+    border-radius: 15px;
+    background: var(--primary-color);
+}
+
+.card{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 18px 18px 36px 0px rgba(167, 102, 5, 0.10);
+    width: 320px;
+
+}
+
+.footer{
+    padding: 15px;
+}
+
+.title{ 
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.description{ 
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-secondary-color);
+}
+
+.price{
+    position: relative;
+    display: inline-block;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-secondary-color);
+}
+
+.currency{ 
+    padding-left: 5px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.rating{
+    position: relative;
+    display: inline-block;
+    bottom: -115px;
+    left: -200px;
+    background: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-secondary-color);
+}
+
+.add-to-cart{
+    position: relative;
+    display: inline-block;
+    bottom: -115px;
+    right: -85px;
+    background: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-secondary-color);
+    border: none;
+}
