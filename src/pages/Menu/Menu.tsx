@@ -4,7 +4,7 @@ import Search from "../../components/Search/Search";
 import styles from './Menu.module.css';
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { PREFIX } from "../../assets/helpers/api";
-import { Product } from "../../interfaces/product.interface";
+import { Product, ProductInteface } from "../../interfaces/product.interface";
 import { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 import { MenuList } from "./MenuList/MenuList";
@@ -37,7 +37,7 @@ export function Menu() {
 					resolve();
 				},2000);
 			});
-			const {data} = await axios.get<Product[]>(`${PREFIX}/products`);
+			const {data} = await axios.get<ProductInteface[]>(`${PREFIX}/products`);
 			setProducts(data);
 			setIsLoading(false);
 		} catch (e) {

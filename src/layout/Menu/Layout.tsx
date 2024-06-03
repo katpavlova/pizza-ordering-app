@@ -1,8 +1,12 @@
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import styles from './Layout.module.css';
 import Button from "../../components/Button/Button";
 import { useEffect } from "react";
 import cn from 'classnames';
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "../../store/store";
+import { getProfile, userActions } from "../../store/user.slice";
+import { RootState } from "@reduxjs/toolkit/query";
 
 
 export function Layout() {
@@ -11,6 +15,20 @@ export function Layout() {
 	// useEffect(() => {
 	// 	console.log(location);
 	// }, [location]);
+
+	const navigate = useNavigate();
+	const dispatch = useDispatch<AppDispatch>();
+	const profile = useSelector((s: RootState) => s.user.profile);
+
+	useEffect(() => 
+	{
+		dispatch(getProfile());
+	}, [dispatch]);
+
+	const logout = () => {
+		dispatch(userActions.logout());
+		navigate('/auth/login');
+	};
 
 	return(<div className={styles['layout']}>
 		<div className={styles['sidebar']}>
@@ -33,7 +51,7 @@ export function Layout() {
 					Cart 
 				</NavLink>
 			</div>
-			<Button className={styles['exit']}>Exit</Button>
+			<Button className={styles['exit']} onClick={logout}>Exit</Button>
 
 		</div>
 		<div className={styles['content']}>
