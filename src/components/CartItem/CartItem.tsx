@@ -8,16 +8,16 @@ import styles from '../ProductCard/ProductCard.module.css';
 function CartItem(props: CartItemProps) {
 	const dispatch = useDispatch<AppDispatch>();
 
-	const increase = (e: MouseEvent) => {
+	const increase = () => {
 		dispatch(cartActions.add(props.id));
 	};
-	const decrease = (e: MouseEvent) => {
-		dispatch(cartActions.add(props.id));
+	const decrease = () => {
+		dispatch(cartActions.remove(props.id));
 	};
-	const remove = (e: MouseEvent) => {
-		dispatch(cartActions.add(props.id));
+	const remove = () => {
+		dispatch(cartActions.delete(props.id));
 	};
-
+ 
 
 	return(
 

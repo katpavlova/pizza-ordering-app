@@ -22,7 +22,6 @@ export interface UserPersisterntState {
 
 const initialState: UserState = {
 	jwt: loadState<UserPersisterntState>(JWT_PERSISTENT_STATE)?.jwt ?? null
-
 };
 
 export const login = createAsyncThunk('user/login', 
