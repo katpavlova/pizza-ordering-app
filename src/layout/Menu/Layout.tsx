@@ -19,6 +19,7 @@ export function Layout() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch<AppDispatch>();
 	const profile = useSelector((s: RootState) => s.user.profile);
+	const items = useSelector((s: RootState) => s.cart.items);
 
 	useEffect(() => 
 	{
@@ -49,7 +50,8 @@ export function Layout() {
 
 				)}>
 					Cart 
-				</NavLink>
+				</NavLink> 
+				<p className={styles['link_p']}>{items.reduce((acc, item) => acc += item.count, 0)}</p>
 			</div>
 			<Button className={styles['exit']} onClick={logout}>Exit</Button>
 
